@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Incidence of hypertensive disorders in pregnancy world wide",
+    "choices": ["5-10%", "7-15%", "10-15%", "0.1-5%"],
+    "answerIndex": 0,
+    "explanation": "Hypertensive disorders of pregnancy, including pre-eclampsia and gestational hypertension, are common complications affecting approximately 5% to 10% of all pregnancies globally."
+  },
+  {
+    "id": 2,
+    "question": "The following are implicated in pre-eclampsia except",
+    "choices": ["VEGF", "PIGs", "Fm-like tyrosin kinase", "Human placenta lactogen"],
+    "answerIndex": 3,
+    "explanation": "Pre-eclampsia is characterized by an imbalance of angiogenic factors (VEGF, PlGF) and anti-angiogenic factors (sFlt-1). Human placental lactogen (hPL) is involved in metabolic changes but not directly in the angiogenic pathophysiology of pre-eclampsia."
+  },
+  {
+    "id": 3,
+    "question": "One of the following are reduced in the pathophysiology of preeclampsia",
+    "choices": ["SFH-1", "SENG", "VEGF", "SFLT-1: PIGF ratio"],
+    "answerIndex": 2,
+    "explanation": "In pre-eclampsia, high levels of soluble fms-like tyrosine kinase-1 (sFlt-1) bind to and reduce the levels of free Vascular Endothelial Growth Factor (VEGF) and Placental Growth Factor (PlGF)."
+  },
+  {
+    "id": 4,
+    "question": "Mrs B presented at the ANC with blood pressure of 140/90mmHg , what is the first line of action",
+    "choices": ["Investigate her", "Repeat BP", "Commence oral labetalol", "Ask for risk factors"],
+    "answerIndex": 1,
+    "explanation": "A single blood pressure reading of 140/90 mmHg is not enough to diagnose hypertension. The standard protocol is to repeat the measurement after a period of rest to confirm if the elevation is persistent."
+  },
+  {
+    "id": 5,
+    "question": "The following are features of hemolysis except",
+    "choices": ["LDH > 600 iu/L", "Schistocytes on PBF", "Bilirubin > 1.0mg/dl", "Haptoglobin < 25mg/dl"],
+    "answerIndex": 2,
+    "explanation": "Hemolysis is marked by elevated LDH, the presence of schistocytes (fragmented red cells), and low haptoglobin. While bilirubin increases, clinical hemolysis is typically defined by levels >1.2 mg/dl; 1.0 mg/dl can still fall within the normal range."
+  },
+  {
+    "id": 6,
+    "question": "About HELLP syndrome",
+    "choices": ["15-20% may not have hypertension", "It is a severe disease", "It is an indication for immediate delivery", "Dexamethasone is the hallmark of treatment"],
+    "answerIndex": 3,
+    "explanation": "While controversial in some guidelines, the use of high-dose corticosteroids like Dexamethasone has traditionally been used to improve platelet counts in HELLP syndrome, though the primary 'cure' is delivery."
+  },
+  {
+    "id": 7,
+    "question": "Gestational hypertension",
+    "choices": ["50% may develop preeclampsia", "Only 10% progresses to pre-eclampsia", "Its an indication for caesarean delivery", "Commoner among Asians"],
+    "answerIndex": 0,
+    "explanation": "Gestational hypertension (hypertension without proteinuria after 20 weeks) is a significant risk factor; approximately 50% of women diagnosed before 30 weeks will progress to full-blown pre-eclampsia."
+  },
+  {
+    "id": 8,
+    "question": "The following are regimen for MgSO4 except",
+    "choices": ["Dakhar", "Sibai", "Zuspan", "Eskino"],
+    "answerIndex": 3,
+    "explanation": "Pritchard (not listed here), Zuspan (IV), and Sibai are well-known magnesium sulfate regimens for eclampsia. 'Eskino' is not a recognized medical protocol for this condition."
+  },
+  {
+    "id": 9,
+    "question": "A 22 year old primigravida with BMI of 30kg/m2 and family history of hypertension presented at the booking clinic at 13 weeks,choose the most appropriate",
+    "choices": ["Counsel her about the risk of PIH", "Commence on low dose aspirin", "Delay aspirin as the risk of PIH is low", "Counsel on weight loss"],
+    "answerIndex": 1,
+    "explanation": "High BMI and a family history are moderate risk factors for pre-eclampsia. Guidelines recommend commencing low-dose aspirin (75-150mg) between 12 and 16 weeks to reduce the risk."
+  },
+  {
+    "id": 10,
+    "question": "Maximum oral dose for labetalol",
+    "choices": ["800mg / day", "1600mg/day", "2000mg/day", "2400mg/day"],
+    "answerIndex": 3,
+    "explanation": "Labetalol is a first-line antihypertensive in pregnancy. The maximum recommended oral dose is 2400 mg per day, typically divided into three or four doses."
+  },
+  {
+    "id": 11,
+    "question": "To differentiate between bicornuate and septate uterus on HSG",
+    "choices": ["Angle of divergence < 90° shows septate", "Angle of divergence of horn < 75°", "Angle of divergence > 75° shows bicornuate", "Angle of divergence < 75° shows bicornuate"],
+    "answerIndex": 1,
+    "explanation": "On a Hysterosalpingogram (HSG), an intercornual angle of less than 75° strongly suggests a septate uterus, whereas an angle greater than 105° suggests a bicornuate uterus."
+  },
+  {
+    "id": 12,
+    "question": "The most common uterine defect is",
+    "choices": ["Septate uterus", "Longitudinal vaginal septum", "Transverse vaginal septum", "Bicornuate uterus"],
+    "answerIndex": 0,
+    "explanation": "The septate uterus is the most frequently encountered congenital Mullerian duct anomaly, often associated with the highest rate of reproductive failure."
+  },
+  {
+    "id": 13,
+    "question": "According to the main classification of uterine anomaly, match the correct one",
+    "choices": ["Class IV - Aplastic", "Class II - Dysmorphic", "Class I - Dysmorphic", "Class VI - Dysplastic"],
+    "answerIndex": 0,
+    "explanation": "This refers to the ESHRE/ESGE classification system where Class U4 represents a hemi-uterus (often involving aplasia of one side) or similar classifications in older ASRM systems."
+  },
+  {
+    "id": 14,
+    "question": "Disorder of dissolution of septum",
+    "choices": ["Septate uterus", "Uterine", "Unicornuate uterus", "Mullerian Agenesis"],
+    "answerIndex": 0,
+    "explanation": "A septate uterus occurs due to the failure of the midline septum to resorb (dissolve) after the fusion of the Mullerian ducts."
+  },
+  {
+    "id": 15,
+    "question": "Gold standard for diagnosis of uterine anomaly",
+    "choices": ["Laparoscopy", "Hysteroscopy", "Saline infusion sonography", "Laparoscopy + hysteroscopy"],
+    "answerIndex": 3,
+    "explanation": "Combining hysteroscopy (to view the internal cavity) and laparoscopy (to view the external fundal contour) is the gold standard for accurately differentiating between anomalies like septate and bicornuate uteri."
+  },
+  {
+    "id": 16,
+    "question": "A patient presented with recurrent pregnancy loss in the 2nd trimester which uterine anomaly is most likely implicated",
+    "choices": ["Septate uterus", "Bicornuate uterus", "Unicornuate uterus", "Uterine didelphys"],
+    "answerIndex": 0,
+    "explanation": "Because the septum is relatively avascular, embryos implanting on it often fail to thrive, making the septate uterus the anomaly most closely linked to recurrent pregnancy loss."
+  },
+  {
+    "id": 17,
+    "question": "Strassman metroplasty done in which condition",
+    "choices": ["Bicornuate uterus", "Septate uterus", "Uterine didelphys", "Arcuate uterus"],
+    "answerIndex": 0,
+    "explanation": "The Strassman metroplasty is a surgical procedure specifically designed to unify a bicornuate uterus by joining the two separate horns."
+  },
+  {
+    "id": 18,
+    "question": "What percentage of infertile couple may have congenital uterine anomaly",
+    "choices": ["8%", "15%", "5%", "1%"],
+    "answerIndex": 0,
+    "explanation": "Congenital uterine anomalies are found in approximately 7-8% of the infertile population, compared to about 5% in the general population."
+  },
+  {
+    "id": 19,
+    "question": "ESHRE classification",
+    "choices": ["5 groups of uterine anomalies", "4 groups of uterine anomalies", "6 groups of uterine anomalies", "8 groups of uterine anomalies"],
+    "answerIndex": 2,
+    "explanation": "The ESHRE/ESGE consensus classifies uterine anomalies into 6 main classes (U0 to U5) based on anatomical deviations."
+  },
+  {
+    "id": 20,
+    "question": "Choose the most appropriate",
+    "choices": ["MRKHS has no uterus and no vagina", "Cervical agenesis may have hematometria", "Pregnancy in a unicornuate uterus is termed not high risk", "Ectopic pregnancy occurs always in unicornuate uterus"],
+    "answerIndex": 1,
+    "explanation": "In cervical agenesis, the uterus is present but the outflow tract is missing; this leads to an accumulation of menstrual blood within the uterus (hematometria) during puberty."
+  },
+  {
+    "id": 21,
+    "question": "Concerning prenatal diagnosis and genetic counseling, the following statements are incorrect.",
+    "choices": ["It helps to detect genetic disorders and birth defects after the second trimester.", "It creates an opportunity for expectant parents.", "It increases the impact of the disorders on expectant parents.", "It decreases the incidence of genetic disorders."],
+    "answerIndex": 3,
+    "explanation": "Prenatal diagnosis identifies existing conditions; it does not biologicaly 'decrease' the incidence of the mutations occurring, though it may lead to termination of affected pregnancies."
+  },
+  {
+    "id": 22,
+    "question": "The basic principles of genetic counseling include the following except?",
+    "choices": ["Empathy", "Positive regard and respect", "Listening", "Companionship"],
+    "answerIndex": 3,
+    "explanation": "Companionship is a social relationship, not a formal clinical principle of genetic counseling, which focuses on non-directive guidance and empathy."
+  },
+  {
+    "id": 23,
+    "question": "Specialists involved in prenatal counseling for families whose unborn child has been diagnosed with a structural or genetic abnormality are?",
+    "choices": ["Obstetrician", "Clinical Psychologist", "Nurses", "General Surgeons"],
+    "answerIndex": 3,
+    "explanation": "While many specialists form the multidisciplinary team, General Surgeons are rarely involved in prenatal counseling compared to geneticists, psychologists, and obstetricians."
+  },
+  {
+    "id": 24,
+    "question": "The following are invasive prenatal diagnostic techniques",
+    "choices": ["Preimplantation genetic diagnosis (PGD)", "Embryoscopy and fetoscopy", "Percutaneous umbilical cord blood sampling", "All of the above"],
+    "answerIndex": 0,
+    "explanation": "PGD involves biopsying an embryo before implantation, making it an invasive laboratory procedure. Note: In some contexts, 'All of the above' is correct, but PGD is the specific answer in this key."
+  },
+  {
+    "id": 25,
+    "question": "The following are common biomarkers used for diagnosing Down syndrome",
+    "choices": ["Placental alpha microglobulin -1 protein (PAMG-1)", "pregnancy-associated plasma protein-A (PAPP-A)", "Dimeric inhibin-A (DIA)", "β-human chorionic gonadotropin (β-hCG)"],
+    "answerIndex": 0,
+    "explanation": "PAMG-1 is a marker used to detect Premature Rupture of Membranes (PROM), not chromosomal abnormalities like Down syndrome."
+  },
+  {
+    "id": 26,
+    "question": "Choose the incorrect option",
+    "choices": ["Serum AFP screening is generally performed between 18 and 22 weeks of pregnancy", "Maternal serum AFP levels are closely related to the developmental status of the neural tube", "In the cases of the vanishing-twin syndrome, the PAPP-A level could be affected by the demise of the twin, and thus should not be used as a means of diagnosis", "None of the above"],
+    "answerIndex": 0,
+    "explanation": "The optimal window for Maternal Serum Alpha-fetoprotein (MSAFP) screening is actually between 15 and 20 weeks, not 18-22 weeks."
+  },
+  {
+    "id": 27,
+    "question": "Concerning the prenatal diagnosis of cleft lip and palate (CLP), which of the following statements is correct?",
+    "choices": ["Prenatal diagnosis of fetal CLP is mainly carried out by fetal ultrasound images", "Genetics and paternal conditions are the main causes of CLP", "Maternal weight and fetal position can interfere with the diagnostic results", "All of the above"],
+    "answerIndex": 1,
+    "explanation": "CLP has a strong genetic component and can be influenced by environmental/paternal factors. While ultrasound is the tool, the key focuses on the causal factors."
+  },
+  {
+    "id": 28,
+    "question": "Legal considerations in genetic screening and testing involved the following except?",
+    "choices": ["A patient’s health information, including the genetic diagnoses should be kept confidential", "The relevant family members should be counseled on the genetic diagnosis and permission from the patient to do so is not necessary", "Obstetricians are encouraged to seek guidance from an ethics committee, an attorney, or both", "Complex ethical and legal issues may arise from unexpected information"],
+    "answerIndex": 1,
+    "explanation": "It is a legal and ethical violation to share a patient's genetic information with family members without the patient's explicit consent."
+  },
+  {
+    "id": 29,
+    "question": "Which of the following statements is most appropriate?",
+    "choices": ["Noninvasive techniques include examining a woman’s uterus through maternal serology and ultrasound", "If a noninvasive screening test indicates an elevated risk of chromosomal or genetic abnormalities, then invasive techniques can confirm it", "Cell-free DNA in maternal blood (cfDNA) is a non-invasive technigue", "The inspection of fetal cells in maternal blood requires a maternal blood draw"],
+    "answerIndex": 1,
+    "explanation": "Screening tests (like cfDNA or ultrasound) only indicate 'high risk.' Definitive diagnosis requires invasive testing like amniocentesis or CVS."
+  },
+  {
+    "id": 30,
+    "question": "All are non-invasive prenatal diagnostic techniques except?",
+    "choices": ["Transcervical retrieval of trophoblast cells", "Glucose tolerance testing", "Non-stress test", "None of the above"],
+    "answerIndex": 3,
+    "explanation": "In the context of this question, all options provided are considered non-invasive compared to procedures like cordocentesis."
+  },
+  {
+    "id": 31,
+    "question": "What is the primary goal of fractionation in radiotherapy?",
+    "choices": ["Increase radiation dose to tumor", "Enhance DNA repair in tumor cells", "Maximize tumor kill while sparing normal tissue", "Reduce treatment duration"],
+    "answerIndex": 2,
+    "explanation": "Fractionation (dividing the dose) allows normal cells to repair themselves between sessions, while tumor cells, which repair poorly, are progressively killed."
+  },
+  {
+    "id": 32,
+    "question": "Which of the following is a common indication for intra-operative radiotherapy (IORT)?",
+    "choices": ["Early-stage cervical cancer", "Inoperable lesion requiring local control", "Prophylaxis in high-risk patients", "Treatment of benign uterine fibroids"],
+    "answerIndex": 1,
+    "explanation": "IORT is used during surgery to deliver a concentrated dose of radiation directly to a tumor bed or a lesion that cannot be fully resected."
+  },
+  {
+    "id": 33,
+    "question": "Which of the following is NOT a late complication of pelvic radiotherapy?",
+    "choices": ["Vaginal stenosis", "Myelosuppression", "Rectal bleeding", "Bladder contracture"],
+    "answerIndex": 1,
+    "explanation": "Myelosuppression (bone marrow suppression) is an acute toxicity that occurs during or immediately after treatment, not a late complication."
+  },
+  {
+    "id": 34,
+    "question": "In the management of stage IB2 cervical cancer, the most appropriate treatment is:",
+    "choices": ["Surgery alone", "Chemotherapy alone", "Concurrent chemo-radiation with brachytherapy", "Hormonal therapy"],
+    "answerIndex": 2,
+    "explanation": "For bulky stage IB2 (or IB3 in newer FIGO) cervical cancer, concurrent chemoradiotherapy (Cisplatin + External Beam Radiation) followed by brachytherapy is the standard of care."
+  },
+  {
+    "id": 35,
+    "question": "What is the most important prognostic factor in vulvar cancer?",
+    "choices": ["Tumor size", "Patient age", "Lymph node involvement", "Histologic grade"],
+    "answerIndex": 2,
+    "explanation": "The status of the inguinal-femoral lymph nodes is the single most important predictor of survival in patients with vulvar cancer."
+  },
+  {
+    "id": 36,
+    "question": "A 58-year-old postmenopausal woman... What is the most appropriate next step in management?",
+    "choices": ["TAH+BSO only", "TAH+BSO followed by vaginal brachytherapy alone", "TAH+BSO followed by pelvic radiotherapy and vaginal brachytherapy", "Neoadjuvant chemotherapy followed by interval debulking surgery"],
+    "answerIndex": 2,
+    "explanation": "High-grade histology with deep myometrial invasion and LVSI puts the patient at high risk for recurrence, requiring adjuvant pelvic radiation."
+  },
+  {
+    "id": 37,
+    "question": "Which of the following best explains the therapeutic advantage of the “4 Rs” of radiobiology?",
+    "choices": ["They selectively enhance tumor cell apoptosis over necrosis", "They exploit differences in DNA repair capacity between tumor and normal cells", "They increase the mitotic index of tumor cells", "They reduce the oxygen enhancement ratio in hypoxic tumors"],
+    "answerIndex": 1,
+    "explanation": "The 4 Rs (Repair, Reoxygenation, Redistribution, Repopulation) are the principles that make fractionation effective by exploiting biological differences."
+  },
+  {
+    "id": 38,
+    "question": "Which of the following is a key advantage of pre-operative radiotherapy?",
+    "choices": ["Allows for better pathological staging", "Reduces the risk of wound healing complications", "Downstages tumor and sterilizes margins", "Avoids the need for surgery"],
+    "answerIndex": 2,
+    "explanation": "Neoadjuvant (pre-operative) radiation aims to shrink the tumor, making it easier to achieve 'clear' surgical margins."
+  },
+  {
+    "id": 39,
+    "question": "The time, course and severity of radiation toxicities on normal tissues are highly dependent on the following EXCEPT",
+    "choices": ["Dose fractionation", "Treatment volume", "Energy of the radiation", "Medium of administration"],
+    "answerIndex": 3,
+    "explanation": "Radiation is a physical energy beam; it is not 'administered' through a medium like a pharmacological drug."
+  },
+  {
+    "id": 40,
+    "question": "In the Manchester system... location of Point A?",
+    "choices": ["2 cm superior to the external cervical os and 2 cm lateral to the uterine tandem", "5 cm lateral to the midline at the same level as Point A", "At the external cervical os", "At the bladder trigone"],
+    "answerIndex": 0,
+    "explanation": "Point A is a theoretical point where the uterine artery and ureter cross; its definition is crucial for dosimetry in brachytherapy."
+  },
+  {
+    "id": 41,
+    "question": "About abnormal uterine bleeding:",
+    "choices": ["A it is bleeding from uterine corpus that is abnormal", "B can be acute or chronic", "C Acute AUB requires immediate intervention", "D Chronic AUB is that which is present for most of previous 3 months"],
+    "answerIndex": 3,
+    "explanation": "By FIGO definition, Chronic AUB is bleeding that has been present for the majority of the last 6 months, though some contexts use 3 months as an incorrect distracter here."
+  },
+  {
+    "id": 42,
+    "question": "Aetiology of Abnormal uterine bleeding includes all the following except",
+    "choices": ["A Pregnancy", "B Iatrogenic", "C Polyp", "D Not otherwise specified"],
+    "answerIndex": 0,
+    "explanation": "The PALM-COEIN classification system for AUB specifically excludes causes related to pregnancy (gestational bleeding)."
+  },
+  {
+    "id": 43,
+    "question": "Which of the following investigations is not relevant for AUB",
+    "choices": ["A 3D/4D Ultrasound", "B Ambulatory hysteroscopy", "C Laparoscopy", "D Genetic testing"],
+    "answerIndex": 2,
+    "explanation": "Laparoscopy looks at the outside of the uterus and the pelvis; it cannot visualize the endometrial cavity where AUB originates."
+  },
+  {
+    "id": 44,
+    "question": "Which of these is not a surgical treatment for AUB",
+    "choices": ["A uterine artery embolization", "B Cryotherapy", "C Radiofrequency ablation", "D Myomectomy"],
+    "answerIndex": 1,
+    "explanation": "Cryotherapy is used for cervical lesions (ectopy/dysplasia) but is not a standard surgical treatment for bleeding from the uterine corpus."
+  },
+  {
+    "id": 45,
+    "question": "Which of these is a non structural cause of AUB",
+    "choices": ["A Pregnancy", "B Climateric", "C Coagulopathy", "D Uterine instrumentation"],
+    "answerIndex": 2,
+    "explanation": "In the PALM-COEIN acronym, 'C' stands for Coagulopathy, which is a systemic (non-structural) cause."
+  },
+  {
+    "id": 46,
+    "question": "Which of the following is incorrect about fetal distress",
+    "choices": ["conversion of glycogen to lactic acid under normal conditions", "fetal aerobic glycolysis occurs under normal conditions", "During hypoxia, fetal anaerobic glycolysis occurs", "Hydrogen ions can stimulate and depress the fetal sinoatrial node"],
+    "answerIndex": 0,
+    "explanation": "Under normal aerobic conditions, glucose is converted to CO2 and water. Lactic acid is a product of anaerobic metabolism (distress/hypoxia)."
+  },
+  {
+    "id": 47,
+    "question": "Which of the following is not a risk factor for fetal distress",
+    "choices": ["Oligohydramnios", "Polyhydramnios", "Rhesus immunization", "Maternal age less than 20 years"],
+    "answerIndex": 3,
+    "explanation": "While very young age is a risk for other obstetric issues, it is not a direct primary risk factor for acute fetal distress in the same way fluid abnormalities are."
+  },
+  {
+    "id": 48,
+    "question": "About meconium in amniotic fluid",
+    "choices": ["A It is always physiological", "B it is always pathological", "C from sympathetic stimulation", "D from vagal stimulation from umbilical cord entrapment"],
+    "answerIndex": 3,
+    "explanation": "Vagal stimulation (often from cord compression) increases intestinal peristalsis and relaxes the anal sphincter, leading to meconium passage."
+  },
+  {
+    "id": 49,
+    "question": "Which is incorrect about fetal heart auscultation in labour",
+    "choices": ["done for at least 60s in the first stage", "done for at least 30s in the first stage", "done every 15 minutes in the first stage", "done every 5 minutes in the first stage"],
+    "answerIndex": 1,
+    "explanation": "To accurately assess the baseline and rule out decelerations, auscultation should be performed for a full 60 seconds after a contraction."
+  },
+  {
+    "id": 50,
+    "question": "Which of the following is not a contraindication to fetal scalp electrode",
+    "choices": ["maternal bleeding disorder", "fetal bleeding disorder", "rhesus isoimmunization", "prematurity"],
+    "answerIndex": 2,
+    "explanation": "Rhesus isoimmunization does not preclude the use of a scalp electrode, whereas infections (HIV/Hep B) or bleeding disorders do."
+  },
+  {
+    "id": 51,
+    "question": "Which is true about fetal blood sampling",
+    "choices": ["fetal scalp PH > 7.20 indicates fetal acidosis", "fetal scalp PH 7.20-7.25 is borderline", "fetal scalp PH > 7.20 is reassuring in second stage", "fetal scalp PH < 7.20 is reassuring in second stage"],
+    "answerIndex": 2,
+    "explanation": "A pH above 7.20-7.25 is generally considered normal and reassuring for fetal well-being."
+  },
+  {
+    "id": 52,
+    "question": "Which of the following is not a consideration for the intrapartum journey (6Ps)",
+    "choices": ["Problems", "Passage", "Power", "Passenger"],
+    "answerIndex": 1,
+    "explanation": "The standard 'Ps' are Power, Passenger, and Passage. In this specific question's 6P framework, 'Passage' is listed as the incorrect one according to the key."
+  },
+  {
+    "id": 53,
+    "question": "Which of the following is not a cause of fetal tachycardia",
+    "choices": ["Chorioamnionitis", "maternal anaemia", "post term pregnancy", "Hyperthyrodism"],
+    "answerIndex": 2,
+    "explanation": "Post-term pregnancy is more commonly associated with decelerations or bradycardia; tachycardia is usually driven by infection or maternal fever."
+  },
+  {
+    "id": 54,
+    "question": "Which of the following is not a cause of prolong severe bradycardia",
+    "choices": ["fetal anaemia", "cord prolapse", "Epidural anaesthesia", "maternal seizure"],
+    "answerIndex": 0,
+    "explanation": "Fetal anemia typically presents as tachycardia or a sinusoidal heart rate pattern, not severe bradycardia."
+  },
+  {
+    "id": 55,
+    "question": "About early deceleration;",
+    "choices": ["also known as type III dips", "it can be physiological or pathological", "it is due to increased sympathetic stimulation", "It is due to increased fetal intracranial pressure"],
+    "answerIndex": 3,
+    "explanation": "Early decelerations are caused by fetal head compression, which increases intracranial pressure and triggers a vagal response."
+  },
+  {
+    "id": 56,
+    "question": "About variable deceleration;",
+    "choices": ["also known as type II dips", "they can be seen in polyhydramnios", "characterized by rapid fall in baseline FHR", "they are related to uterine contractions"],
+    "answerIndex": 2,
+    "explanation": "Variable decelerations are defined by their abrupt onset (reaching the nadir in <30 seconds) and are typically due to umbilical cord compression."
+  },
+  {
+    "id": 57,
+    "question": "About accelerations in CTG",
+    "choices": ["prolonged acceleration last 2-10 minutes", "prolonged acceleration may last for more than 10 minutes", "presence with contractions is healthy", "isolated absence is of undetermined significance"],
+    "answerIndex": 1,
+    "explanation": "An acceleration lasting longer than 10 minutes is considered a change in the baseline heart rate."
+  },
+  {
+    "id": 58,
+    "question": "About late decelerations on CTG",
+    "choices": ["begins at onset of contraction", "also known as type I dip", "also known as type II dip", "also known as type III dip"],
+    "answerIndex": 3,
+    "explanation": "The answer key identifies Type III dip as the synonym for late decelerations in this context (though Type II is more common in some textbooks)."
+  },
+  {
+    "id": 59,
+    "question": "About prolonged deceleration",
+    "choices": ["it lasts more than 2 minutes", "non-reassuring feature", "Occurs when deceleration lasts more than 60 seconds", "can be an abnormal feature"],
+    "answerIndex": 2,
+    "explanation": "This question defines the onset of 'prolonged' in this specific exam context as lasting more than 60 seconds."
+  },
+  {
+    "id": 60,
+    "question": "About categorization of CTG traces",
+    "choices": ["suspicious when 2+ features are non-reassuring", "non-reassuring when 2+ features are pathological", "abnormal when 1+ feature is pathological", "suspicious when 1 feature is non reassuring"],
+    "answerIndex": 3,
+    "explanation": "According to NICE/FIGO guidelines, a CTG with one non-reassuring feature is categorized as 'Suspicious'."
+  },
+  {
+    "id": 61,
+    "question": "Informed consent is best described as",
+    "choices": ["a signed document", "agreement obtained by the doctor", "a process of communication", "a legal protection"],
+    "answerIndex": 2,
+    "explanation": "Consent is not just a signature; it is an ongoing dialogue where the patient understands risks, benefits, and alternatives."
+  },
+  {
+    "id": 62,
+    "question": "Which of the following best reflects the principle of autonomy?",
+    "choices": ["Do no harm", "Acting in the patient’s best interest", "Respecting the patients right to make decision", "Treating all patient equally"],
+    "answerIndex": 2,
+    "explanation": "Autonomy is the ethical principle that patients have the right to self-determination and to make their own healthcare choices."
+  },
+  {
+    "id": 63,
+    "question": "Paternity can be established by the following except",
+    "choices": ["Legal presumption", "Acknowledgment", "when the woman has proof", "posthumous birth"],
+    "answerIndex": 3,
+    "explanation": "Posthumous birth refers to a child born after the father's death; it is a timing of birth, not a legal mechanism to 'establish' paternity."
+  },
+  {
+    "id": 64,
+    "question": "Which of the following is true?",
+    "choices": ["Autonomy overrides beneficence", "Beneficence doesn't allow paternalism", "Justice means doing no harm", "Justice is a legal term for capacity"],
+    "answerIndex": 0,
+    "explanation": "In modern bioethics, a competent patient's autonomy (right to refuse treatment) generally overrides the doctor's duty of beneficence."
+  },
+  {
+    "id": 65,
+    "question": "A classic example of ethical violation was seen in",
+    "choices": ["Nuremberg Code", "Belmont report", "Tuskeegee Study", "Declaration of Helsinki"],
+    "answerIndex": 2,
+    "explanation": "The Tuskegee Syphilis Study, where treatment was withheld from African American men, is one of the most famous examples of unethical medical research."
+  },
+  {
+    "id": 66,
+    "question": "Which is the leading direct cause of maternal mortality in West Africa?",
+    "choices": ["A. Hypertensive disorders", "B. Postpartum haemorrhage", "C. Sepsis", "D. Unsafe abortion"],
+    "answerIndex": 1,
+    "explanation": "Postpartum hemorrhage (PPH) remains the single most common cause of maternal death worldwide, particularly in developing regions."
+  },
+  {
+    "id": 67,
+    "question": "A 32-year-old woman with sickle cell disease... death is best classified as:",
+    "choices": ["A. Direct maternal death", "B. Incidental maternal death", "C. Indirect maternal death", "D. Late maternal death"],
+    "answerIndex": 2,
+    "explanation": "Indirect deaths result from a pre-existing disease (like Sickle Cell) that was aggravated by the physiological effects of pregnancy."
+  },
+  {
+    "id": 68,
+    "question": "Which of the following best fits the WHO definition of maternal death?",
+    "choices": ["A. Death during pregnancy from any cause", "B. Death during pregnancy or within 42 days of termination", "C. Death within one year", "D. Death during labour only"],
+    "answerIndex": 1,
+    "explanation": "The standard WHO definition includes deaths during pregnancy or within 42 days of its end, from any cause related to pregnancy management."
+  },
+  {
+    "id": 69,
+    "question": "A woman remains at home for 3 days... This represents:",
+    "choices": ["A. Phase III delay", "B. Phase I delay", "C. Phase II delay", "D. Governance failure"],
+    "answerIndex": 1,
+    "explanation": "Phase I delay is the delay in the decision to seek care by the individual or family."
+  },
+  {
+    "id": 70,
+    "question": "Perinatal mortality rate (PMR)... includes:",
+    "choices": ["A. fetal deaths from 20 weeks", "B. Stillbirths from 28 weeks and early neonatal deaths within 7 days", "C. neonatal deaths within 28 days", "D. Stillbirths of any gestation"],
+    "answerIndex": 1,
+    "explanation": "PMR traditionally combines late fetal deaths (stillbirths) and early neonatal deaths (within the first week of life)."
+  },
+  {
+    "id": 71,
+    "question": "Stillborn baby noted to have intact skin without peeling... Consistent with:",
+    "choices": ["A. Macerated stillbirth", "B. Fresh stillbirth", "C. Congenital anomaly", "D. Previable fetal loss"],
+    "answerIndex": 1,
+    "explanation": "Intact skin indicates the baby died recently (fresh stillbirth), usually during labor; maceration (peeling) takes hours to develop in utero."
+  },
+  {
+    "id": 72,
+    "question": "What is the primary purpose of MPDSR?",
+    "choices": ["A. allocate blame", "B. legal evidence", "C. identify avoidable factors and implement actions", "D. report statistics"],
+    "answerIndex": 2,
+    "explanation": "Maternal and Perinatal Death Surveillance and Response is a quality improvement tool to learn from deaths and prevent their recurrence."
+  },
+  {
+    "id": 73,
+    "question": "Doctor shares identifiable patient details... Violates:",
+    "choices": ["A. Transparency", "B. Participation", "C. No-blame, confidential review", "D. Mandatory reporting"],
+    "answerIndex": 2,
+    "explanation": "MPDSR meetings must be confidential and 'no-blame' to encourage honest reporting and learning."
+  },
+  {
+    "id": 74,
+    "question": "Most common contributors to perinatal mortality in West Africa:",
+    "choices": ["A. Congenital anomalies", "B. Rh isoimmunisation", "C. Intrapartum-related events (asphyxia) and prematurity", "D. Malignancies"],
+    "answerIndex": 2,
+    "explanation": "Birth asphyxia and complications of preterm birth are the leading causes of newborn death in resource-limited settings."
+  },
+  {
+    "id": 75,
+    "question": "Hospital introduces a protocol for magnesium sulphate. Represents:",
+    "choices": ["A. Surveillance", "B. Identification", "C. Review", "D. Response"],
+    "answerIndex": 3,
+    "explanation": "The 'Response' phase of MPDSR is where concrete actions (like new protocols or training) are taken to address the findings of a review."
+  },
+  {
+    "id": 76,
+    "question": "Which of the following is false?",
+    "choices": ["SDG target 3.1 - MMR <70", "EPMM: reduce MMR by 2/3", "EPMM supplementary target: MMR higher than 140", "MMR < 420 in 2010: reduce by 2/3"],
+    "answerIndex": 2,
+    "explanation": "The target of 140 is twice the global target of 70, not 'thrice' as stated in the incorrect option."
+  },
+  {
+    "id": 77,
+    "question": "30-year-old G2P1... EFW 5th centile; Normal fluid; Normal Doppler; Classification?",
+    "choices": ["A. Small for gestational age (SGA)", "B. Early-onset FGR", "C. Late-onset FGR", "D. Constitutionally small fetus"],
+    "answerIndex": 0,
+    "explanation": "A fetus <10th centile with normal Dopplers is classified as SGA; FGR requires abnormal Doppler findings or weight <3rd centile."
+  },
+  {
+    "id": 78,
+    "question": "Characteristic of early-onset FGR?",
+    "choices": ["A. Normal uterine artery Doppler", "B. Association with placental insufficiency and preeclampsia", "C. Sudden deterioration near term", "D. Normal umbilical artery Doppler"],
+    "answerIndex": 1,
+    "explanation": "Early-onset FGR (<32 weeks) is typically due to severe placental dysfunction and is strongly associated with maternal pre-eclampsia."
+  },
+  {
+    "id": 79,
+    "question": "28-week fetus... reversed end-diastolic flow. Next surveillance tool?",
+    "choices": ["A. Weekly BPP", "B. Daily CTG", "C. Ductus venosus Doppler", "D. MCA peak systolic velocity"],
+    "answerIndex": 2,
+    "explanation": "In early FGR, changes in the Ductus Venosus Doppler are the best indicators of imminent fetal heart failure and help time the delivery."
+  },
+  {
+    "id": 80,
+    "question": "35-week fetus... reduced MCA pulsatility index. Indicates?",
+    "choices": ["A. Fetal anemia", "B. Fetal infection", "C. Cerebral redistribution due to hypoxia", "D. Normal variation"],
+    "answerIndex": 2,
+    "explanation": "Reduced resistance in the Middle Cerebral Artery (MCA) indicates 'brain-sparing,' where the fetus redirects blood flow to the brain in response to hypoxia."
+  },
+  {
+    "id": 81,
+    "question": "Which statement about the cerebroplacental ratio (CPR) is incorrect?",
+    "choices": ["A. ratio of MCA PI to Uterine Artery PI", "B. low CPR suggests risk of compromise", "C. Abnormal CPR reflects placental resistance", "D. CPR replaces umbilical artery Doppler in all FGR cases"],
+    "answerIndex": 3,
+    "explanation": "The CPR is a useful tool, but it complements rather than replaces the Umbilical Artery Doppler in FGR management."
+  },
+  {
+    "id": 82,
+    "question": "In early-onset FGR, which Doppler change is a late and preterminal sign?",
+    "choices": ["A. Increased uterine artery resistance", "B. Raised umbilical artery PI", "C. Reversed a-wave in the ductus venosus", "D. Reduced MCA PI"],
+    "answerIndex": 2,
+    "explanation": "Loss or reversal of the 'a-wave' in the ductus venosus is a very late sign of fetal cardiac compromise."
+  },
+  {
+    "id": 83,
+    "question": "29 weeks... AEDF in umbilical, normal ductus venosus. Management?",
+    "choices": ["A. Immediate delivery", "B. Continue close surveillance", "C. Deliver at 32 weeks", "D. Continue surveillance with DV Doppler"],
+    "answerIndex": 1,
+    "explanation": "At 29 weeks, the goal is to prolong pregnancy if the Ductus Venosus remains normal, as every day in utero significantly improves neonatal survival."
+  },
+  {
+    "id": 84,
+    "question": "37-week fetus... EFW 6th centile, normal umbilical, but CPR <5th centile. Management?",
+    "choices": ["A. Expectant management", "B. Elective caesarean section", "C. Induction of labour with continuous EFM", "D. Weekly Doppler"],
+    "answerIndex": 2,
+    "explanation": "A low CPR at term suggests the fetus is at risk during labor; induction with continuous monitoring is recommended to ensure safety."
+  },
+  {
+    "id": 85,
+    "question": "Which statement regarding computerised cardiotocography (cCTG) is incorrect?",
+    "choices": ["A. Increases with gestational age", "B. STV assesses wellbeing", "C. Does not predict fetal deterioration", "D. It predicts placental resistance"],
+    "answerIndex": 3,
+    "explanation": "cCTG (specifically Short-Term Variation) is a tool for assessing fetal autonomic health, not for measuring placental vascular resistance."
+  },
+  {
+    "id": 86,
+    "question": "Why is biophysical profile (BPP) less preferred than Doppler in monitoring early FGR?",
+    "choices": ["A. specialized equipment", "B. detects acute hypoxia earlier", "C. reflects late hypoxic changes", "D. cannot be performed before 32 weeks"],
+    "answerIndex": 2,
+    "explanation": "Biophysical profile markers (breathing, movement) typically fail only after Doppler abnormalities have already established chronic compromise."
+  },
+  {
+    "id": 87,
+    "question": "Which of the following statement is false?",
+    "choices": ["Stillbirth risk 0.8/1000", "Abnormal BPP predicts pH <7.20", "Severe acidaemia is absolute indication", "24-28 weeks, prolonging increases death by 2% per day"],
+    "answerIndex": 3,
+    "explanation": "In fact, between 24 and 28 weeks, each day the pregnancy is prolonged generally *decreases* neonatal mortality and morbidity."
+  },
+  {
+    "id": 88,
+    "question": "The following are components of Yousef syndrome except",
+    "choices": ["amenorrhea", "menouria", "patent cervix", "urinary incontinence"],
+    "answerIndex": 3,
+    "explanation": "Yousef syndrome is characterized by cyclical bleeding through the bladder (menouria) and amenorrhea after a C-section, but not typically incontinence."
+  },
+  {
+    "id": 89,
+    "question": "Choose the correct clinical governance process for quality improvement.",
+    "choices": ["Clinical Audit.", "Clinical guideline development.", "Clinical risk implementation.", "Clinical research"],
+    "answerIndex": 0,
+    "explanation": "Clinical Audit is the primary cyclical process used to improve care by comparing current practice against established standards."
+  },
+  {
+    "id": 90,
+    "question": "BTL difficulty... the tubes were partly plastered... most preferred thing is to do",
+    "choices": ["Try Uchida", "Do kroener's fimbriectomy", "Use parkland method", "Use madlener method"],
+    "answerIndex": 1,
+    "explanation": "Kroener’s fimbriectomy involves removing the fimbrial end of the tube and is a useful alternative when the mid-segment is too adherent for a loop."
+  },
+  {
+    "id": 91,
+    "question": "Metastatic uterine tumours that likely respond to progestational therapy",
+    "choices": ["Low grade stromal tumour", "Adenocarcinoma", "Carcinosarcoma", "Mixed stromal tumour"],
+    "answerIndex": 1,
+    "explanation": "Endometrial adenocarcinomas are often hormone-receptor positive and may respond to high-dose progestogens."
+  },
+  {
+    "id": 92,
+    "explanation": "Implanon releases etonogestrel, which acts primarily by suppressing the LH surge, thereby preventing ovulation.",
+    "question": "Implanon major mechanism of action is",
+    "choices": ["Sterile inflammatory response", "Thickening of cervical mucus", "Inhibition of ovulation", "Thinning of the endometrium"],
+    "answerIndex": 2
+  },
+  {
+    "id": 93,
+    "question": "Concerning menopause true statements except",
+    "choices": ["HT remains most effective", "Estrogen Therapy only for all women", "Danazole can be used", "Tibolone is useful"],
+    "answerIndex": 1,
+    "explanation": "Estrogen-only therapy is only appropriate for women who have had a hysterectomy; those with an intact uterus require progesterone to prevent endometrial cancer."
+  },
+  {
+    "id": 94,
+    "question": "False in the management of menopause except",
+    "choices": ["Tibolone actions", "SSRIs as effective", "Fezolinetant provides relief", "Gabapentin effective 2nd line"],
+    "answerIndex": 2,
+    "explanation": "Fezolinetant is a newer non-hormonal drug that targets the thermoregulatory center to treat hot flashes without affecting the endometrium."
+  },
+  {
+    "id": 95,
+    "question": "Concerning Blatt-Kupperman menopausal index which is incorrect",
+    "choices": ["11 symptoms rated 0-3", "0–5 = mild", "5–10 = mild", "10–15 = moderate"],
+    "answerIndex": 1,
+    "explanation": "The score 0-5 is often considered 'no symptoms' or 'subclinical'; mild symptoms usually start from a higher threshold."
+  },
+  {
+    "id": 96,
+    "question": "GDM diagnosis for medium/low resource setting:",
+    "choices": ["booking and 24-28 weeks", "All women at booking", "All women at 24-28weeks", "Women at risk at 24-28 weeks"],
+    "answerIndex": 2,
+    "explanation": "Universal screening at 24-28 weeks is recommended in high-risk populations to capture cases missed at booking."
+  },
+  {
+    "id": 97,
+    "question": "Incorrect blood glucose target in GDM",
+    "choices": ["2hr – <6.7mmol/l", "FBG – <5.3mmol/l", "1hr - <7.8 mmol/l", "RBG – 6.9 mmol/l"],
+    "answerIndex": 3,
+    "explanation": "Random Blood Glucose (RBG) is not used for monitoring or targeting treatment in GDM; fasting and post-prandial levels are the standards."
+  },
+  {
+    "id": 98,
+    "question": "WHO diagnosis of hyperglycemia in pregnancy except",
+    "choices": ["FBG ≥7.0 diagnostic of GDM", "1hr OGTT ≥11.1 diagnostic of DM", "FBG 5.0 -6.9 diagnostic of GDM", "2HPP 8.5-11.0 diagnostic of GDM"],
+    "answerIndex": 3,
+    "explanation": "A 2-hour post-prandial (2HPP) of 8.5-11.0 mmol/l is diagnostic of GDM, but the key identifies this as the exception in the context of WHO criteria."
+  },
+  {
+    "id": 99,
+    "question": "Incorrect average insulin requirement per GA",
+    "choices": ["6-18 weeks 0.7 units/kg", "18-26 weeks 0.8 units/kg", "26-36 weeks 0.9 units/kg", "Greater than 36weeks 0.8 units/kg"],
+    "answerIndex": 3,
+    "explanation": "Insulin resistance typically increases throughout pregnancy; a decrease after 36 weeks is generally not the 'average' requirement but may signal placental aging."
+  },
+  {
+    "id": 100,
+    "question": "Which of the following factors inhibits leiomyoma cell proliferation?",
+    "choices": ["PDGF", "KLF11", "TGFb3", "EGF"],
+    "answerIndex": 1,
+    "explanation": "KLF11 (Kruppel-like factor 11) is a transcription factor that has been shown to inhibit the growth and proliferation of uterine fibroid cells."
+  }
+]
