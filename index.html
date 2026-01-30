@@ -1,125 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>CBT Exam Tool</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OAUTHC Mock Exam - Login</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>CBT Exam</h1>
-    <div style="display:flex;gap:12px;align-items:center">
-      <div class="settings card" style="display:flex;gap:8px;align-items:center;padding:8px 12px;">
-        <label for="mins">Minutes</label>
-        <input type="number" id="mins" min="0" value="60" />
-        <label for="secs">Seconds</label>
-        <input type="number" id="secs" min="0" max="59" value="0" />
-        <button id="startBtn">Start</button>
-        <button id="resetBtn" class="ghost">Reset</button>
-      </div>
-      <div id="timer" class="timer">--:--</div>
+  <div class="welcome-card">
+    <h1>OAUTHC ILE-IFE</h1>
+    <h3>Mock Single Best Answer (Part 1 Examination)</h3>
+    <div class="instruction-box">
+      <h4>Exam Instructions:</h4>
+      <ul>
+        <li><strong>Time Allowed:</strong> 1 Hour (60 Minutes)</li>
+        <li><strong>Format:</strong> 100 Single Best Answer (SBA) questions</li>
+        <li><strong>Topics:</strong> Obstetrics, Gynaecology, Radiology, and Ethics</li>
+        <li>Once started, the timer cannot be paused.</li>
+      </ul>
     </div>
-  </header>
-
-  <main class="card">
-    <div id="examArea">
-      <div class="question-area">
-        <div class="q-left">
-          <div class="question-text" id="qText">Loading questions…</div>
-          <div class="options" id="options"></div>
-          <div class="q-meta" id="qMeta"></div>
-          <div class="pagination" id="pagination"></div>
-          <div class="controls">
-            <div>
-              <button id="prevBtn" class="ghost">Previous</button>
-              <button id="nextBtn" class="ghost">Next</button>
-            </div>
-            <div>
-              <button id="submitBtn" style="background:#10b981">Submit</button>
-            </div>
-          </div>
-        </div>
-        <aside class="q-right">
-          <div style="font-weight:700;margin-bottom:8px">Exam Progress</div>
-          <div id="progressInfo" class="small">Answered 0 of 0</div>
-          <div style="margin-top:12px;font-weight:700">Time left</div>
-          <div id="timerAside" style="font-size:18px;margin-top:6px">--:--</div>
-          <div style="margin-top:18px">
-            <div style="font-weight:700;margin-bottom:6px">Legend</div>
-            <div class="flex"><div style="width:18px;height:18px;border-radius:4px;background:#d1fae5;border:1px solid #10b981"></div><div class="small">Answered</div></div>
-            <div class="flex" style="margin-top:8px"><div style="width:18px;height:18px;border-radius:4px;background:#fde8e8;border:1px solid #ef4444"></div><div class="small">Unanswered</div></div>
-          </div>
-        </aside>
+    <div class="form-group">
+      <div class="input-field">
+        <label for="candidateName">Full Name</label>
+        <input type="text" id="candidateName" placeholder="Enter your full name">
+      </div>
+      <div class="input-field">
+        <label for="examNumber">Exam Number</label>
+        <input type="text" id="examNumber" placeholder="e.g. 001">
       </div>
     </div>
+    <button class="start-btn" onclick="proceed()">Begin Examination</button>
+  </div>
 
-    <div id="resultArea" class="hidden">
-      <div class="results">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div class="score-badge" id="finalScore">0 / 0</div>
-            <div class="small" id="scorePercent">0%</div>
-          </div>
-          <div>
-            <button id="reviewBtn" class="ghost">Review answers</button>
-            <button id="restartBtn">Restart exam</button>
-          </div>
-        </div>
-
-        <hr style="margin:12px 0">
-
-        <div id="answerKey"></div>
-      </div>
-    </div>
-  </main>
-
-  <footer style="margin-top:12px;text-align:center;color:var(--muted);font-size:13px">
-    Tip: provide a <code>questions.json</code> in same folder (or use the embedded sample).
-  </footer>
-</div>
-
-<script src="main.js"></script>
-
-<script id="sample-questions" type="application/json">
-[
-  {
-    "id": 1,
-    "question": "Which gas is most abundant in the Earth's atmosphere?",
-    "choices": ["Oxygen", "Nitrogen", "Carbon dioxide", "Argon"],
-    "answerIndex": 1,
-    "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere."
-  },
-  {
-    "id": 2,
-    "question": "What is the value of gravitational acceleration near Earth's surface (approx)?",
-    "choices": ["9.8 m/s²", "8.9 m/s²", "10.5 m/s²", "7.2 m/s²"],
-    "answerIndex": 0,
-    "explanation": "Standard gravity approx 9.8 m/s²."
-  },
-  {
-    "id": 3,
-    "question": "Which of the following is a prime number?",
-    "choices": ["15", "21", "17", "27"],
-    "answerIndex": 2,
-    "explanation": "17 is prime (only divisible by 1 and 17)."
-  },
-  {
-    "id": 4,
-    "question": "In computer science, what does 'HTML' stand for?",
-    "choices": ["HyperText Markup Language", "HighText Machine Language", "Hyperlinking and Text Markup Language", "HomeTool Markup Language"],
-    "answerIndex": 0,
-    "explanation": "HTML stands for HyperText Markup Language."
-  },
-  {
-    "id": 5,
-    "question": "Which planet is known as the Red Planet?",
-    "choices": ["Venus", "Mars", "Jupiter", "Mercury"],
-    "answerIndex": 1,
-    "explanation": "Mars is called the Red Planet because of its reddish appearance."
-  }
-]
-</script>
+  <script>
+    function proceed() {
+      const name = document.getElementById('candidateName').value.trim();
+      const num = document.getElementById('examNumber').value.trim();
+      if (!name || !num) { alert("Please fill in all fields."); return; }
+      localStorage.setItem('candidateName', name);
+      localStorage.setItem('examNumber', num);
+      window.location.href = 'exam.html';
+    }
+  </script>
 </body>
 </html>
