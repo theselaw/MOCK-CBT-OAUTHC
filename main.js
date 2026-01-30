@@ -1,293 +1,153 @@
-/*
- CBT Exam Tool JS
- - Tries to fetch questions.json; falls back to embedded sample if not found.
- - Tracks user answers, timer, pagination, submit, final score + answer key.
-*/
-
 (() => {
-  // DOM refs
-  const qText = document.getElementById('qText');
-  const optionsEl = document.getElementById('options');
-  const paginationEl = document.getElementById('pagination');
-  const qMeta = document.getElementById('qMeta');
-  const progressInfo = document.getElementById('progressInfo');
-  const timerEl = document.getElementById('timer');
-  const timerAside = document.getElementById('timerAside');
-  const startBtn = document.getElementById('startBtn');
-  const resetBtn = document.getElementById('resetBtn');
-  const submitBtn = document.getElementById('submitBtn');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const minsInput = document.getElementById('mins');
-  const secsInput = document.getElementById('secs');
-  const examArea = document.getElementById('examArea');
-  const resultArea = document.getElementById('resultArea');
-  const finalScore = document.getElementById('finalScore');
-  const scorePercent = document.getElementById('scorePercent');
+  // DOM Elements
+  const qText = document.getElementById('qText'), optionsEl = document.getElementById('options');
+  const paginationEl = document.getElementById('pagination'), timerEl = document.getElementById('timer');
+  const examArea = document.getElementById('examArea'), resultArea = document.getElementById('resultArea');
+  const minsInput = document.getElementById('mins'), startBtn = document.getElementById('startBtn');
   const answerKey = document.getElementById('answerKey');
-  const reviewBtn = document.getElementById('reviewBtn');
-  const restartBtn = document.getElementById('restartBtn');
 
-  // data
-  let questions = [];
-  let currentIndex = 0;
-  let answers = []; // store selected index or null
-  let started = false;
-  let timer = null;
-  let totalSeconds = 0;
-  let remainingSeconds = 0;
+  let questions = [], currentIndex = 0, answers = [], started = false, timer = null, remainingSeconds = 0;
 
-  // Try to load external questions.json
-  async function loadQuestions(){
+  // NEW: Logic to load questions from external JSON or Internal Fallback
+  async function loadQuestions() {
     try {
-      const resp = await fetch('questions.json', {cache: "no-store"});
-      if(!resp.ok) throw new Error('no external file');
-      const data = await resp.json();
-      console.log('Loaded external questions.json');
+      // Try to fetch external file
+      const response = await fetch('questions.json');
+      if (!response.ok) throw new Error("File not found");
+      const data = await response.json();
+      console.log("Questions loaded from questions.json");
       return data;
-    } catch (e) {
-      console.log('Falling back to embedded sample questions');
+    } catch (err) {
+      // Fallback to the <script id="sample-questions"> in exam.html
+      console.warn("External questions.json not found, using embedded samples.");
       const embedded = document.getElementById('sample-questions').textContent;
       return JSON.parse(embedded);
     }
   }
 
-  // Initialise
-  async function init(){
+  async function init() {
+    // Identity Check
+    const name = localStorage.getItem('candidateName') || "Guest Candidate";
+    const num = localStorage.getItem('examNumber') || "000";
+    document.getElementById('candidateHeader').innerHTML = `Candidate: <strong>${name}</strong> | ID: <strong>${num}</strong>`;
+
+    // Load Data
     questions = await loadQuestions();
-    // basic validation: ensure array and answerIndex present
-    if(!Array.isArray(questions) || questions.length===0){
-      qText.innerText = 'No questions found in questions.json/sample.';
-      return;
-    }
     answers = Array(questions.length).fill(null);
+    
     buildPagination();
-    renderQuestion(0);
-    updateProgress();
-    updateTimerDisplay(0);
+    updateTimerDisplay(parseInt(minsInput.value) * 60);
   }
 
-  function buildPagination(){
+  // ... (buildPagination and renderQuestion stay the same as previous)
+
+  function buildPagination() {
     paginationEl.innerHTML = '';
-    questions.forEach((q,i)=>{
+    questions.forEach((_, i) => {
       const btn = document.createElement('button');
       btn.className = 'page-btn unanswered';
-      btn.textContent = i+1;
-      btn.title = `Question ${i+1}`;
-      btn.addEventListener('click', ()=> {
-        if(!started) return;
-        renderQuestion(i);
-      });
+      btn.textContent = i + 1;
+      btn.onclick = () => { if(started) renderQuestion(i); };
       paginationEl.appendChild(btn);
     });
-    updatePaginationStyles();
   }
 
-  function updatePaginationStyles(){
+  function renderQuestion(index) {
+    currentIndex = index;
+    const q = questions[index];
+    qText.innerText = `Q${index + 1}. ${q.question}`;
+    optionsEl.innerHTML = '';
+
+    q.choices.forEach((choice, idx) => {
+      const opt = document.createElement('div');
+      opt.className = `option ${answers[index] === idx ? 'selected' : ''}`;
+      opt.innerHTML = `<strong>${String.fromCharCode(65+idx)}.</strong> ${choice}`;
+      opt.onclick = () => {
+        answers[index] = idx;
+        renderQuestion(index);
+        updateUI();
+      };
+      optionsEl.appendChild(opt);
+    });
+    updateUI();
+  }
+
+  function updateUI() {
     const nodes = Array.from(paginationEl.children);
-    nodes.forEach((btn,i)=>{
-      btn.classList.toggle('current', i===currentIndex);
+    nodes.forEach((btn, i) => {
+      btn.classList.toggle('current', i === currentIndex);
       btn.classList.toggle('answered', answers[i] !== null);
       btn.classList.toggle('unanswered', answers[i] === null);
     });
+    const count = answers.filter(a => a !== null).length;
+    document.getElementById('progressInfo').innerText = `Answered ${count} of ${questions.length}`;
   }
 
-  function renderQuestion(index){
-    currentIndex = index;
-    const q = questions[index];
-    qText.innerText = `Q${index+1}. ${q.question}`;
-    qMeta.innerText = `Question ${index+1} of ${questions.length}`;
-    optionsEl.innerHTML = '';
-    q.choices.forEach((choice, idx) => {
-      const opt = document.createElement('div');
-      opt.className = 'option';
-      opt.dataset.idx = idx;
-      opt.tabIndex = 0;
-      opt.innerHTML = `<div style="width:18px;height:18px;border-radius:4px;border:1px solid #ddd;display:inline-block;text-align:center;line-height:18px;font-size:12px">${String.fromCharCode(65+idx)}</div>
-                       <div style="flex:1">${choice}</div>`;
-      // highlight if already selected
-      if(answers[index] === idx) opt.classList.add('selected');
-      opt.addEventListener('click', () => {
-        if(!started) return;
-        answers[index] = idx;
-        // visually mark selected
-        Array.from(optionsEl.children).forEach(c => c.classList.remove('selected'));
-        opt.classList.add('selected');
-        updatePaginationStyles();
-        updateProgress();
-      });
-      optionsEl.appendChild(opt);
-    });
-    updatePaginationStyles();
-    updateProgress();
-  }
-
-  function updateProgress(){
-    const answeredCount = answers.filter(a=>a!==null).length;
-    progressInfo.innerText = `Answered ${answeredCount} of ${questions.length}`;
-  }
-
-  // Timer functions
-  function startTimer(totalSec){
-    totalSeconds = totalSec;
-    remainingSeconds = totalSec;
-    clearInterval(timer);
-    timer = setInterval(()=>{
+  function startTimer(duration) {
+    remainingSeconds = duration;
+    timer = setInterval(() => {
       remainingSeconds--;
-      if(remainingSeconds <= 0){
-        clearInterval(timer);
-        remainingSeconds = 0;
-        tick(); // final update
-        endExam(true);
-      } else {
-        tick();
-      }
+      updateTimerDisplay(remainingSeconds);
+      if (remainingSeconds <= 0) { clearInterval(timer); endExam(); }
     }, 1000);
-    tick();
   }
 
-  function tick(){
-    updateTimerDisplay(remainingSeconds);
-    // change color when <=30%
-    const threshold = Math.ceil(0.3 * totalSeconds);
-    const timerNode = timerEl;
-    if(remainingSeconds <= threshold){
-      timerNode.classList.add('red');
-    } else {
-      timerNode.classList.remove('red');
-    }
+  function updateTimerDisplay(sec) {
+    const m = String(Math.floor(sec / 60)).padStart(2, '0');
+    const s = String(sec % 60).padStart(2, '0');
+    timerEl.innerText = `${m}:${s}`;
+    document.getElementById('timerAside').innerText = `${m}:${s}`;
+    if (sec < 300) timerEl.classList.add('red');
   }
 
-  function updateTimerDisplay(sec){
-    const mm = String(Math.floor(sec/60)).padStart(2,'0');
-    const ss = String(sec%60).padStart(2,'0');
-    timerEl.innerText = `${mm}:${ss}`;
-    timerAside.innerText = `${mm}:${ss}`;
-  }
-
-  // Submit and scoring
-  function calculateScore(){
-    let correct = 0;
-    questions.forEach((q,i)=>{
-      if(answers[i] === q.answerIndex) correct++;
-    });
-    return {correct, total: questions.length, percent: Math.round((correct/questions.length)*100)};
-  }
-
-  function showResults(auto=false){
+  function endExam() {
+    started = false;
+    clearInterval(timer);
     examArea.classList.add('hidden');
     resultArea.classList.remove('hidden');
-    const {correct,total,percent} = calculateScore();
-    finalScore.innerText = `${correct} / ${total}`;
-    scorePercent.innerText = `${percent}%`;
 
-    // Build answer key
-    answerKey.innerHTML = '';
-    questions.forEach((q,i)=>{
+    document.getElementById('resName').innerText = localStorage.getItem('candidateName');
+    document.getElementById('resNum').innerText = localStorage.getItem('examNumber');
+
+    let correct = 0;
+    answerKey.innerHTML = ''; // Clear previous results
+
+    questions.forEach((q, i) => {
+      const isCorrect = (answers[i] === q.answerIndex);
+      if (isCorrect) correct++;
+
+      // Build the Answer Key Review
       const row = document.createElement('div');
       row.className = 'result-row';
-      const userAnsIdx = answers[i];
-      const correctIdx = q.answerIndex;
-      const isCorrect = userAnsIdx === correctIdx;
-      const userAnsText = userAnsIdx === null ? `<em style="color:#7f1d1d">No answer</em>` : `${String.fromCharCode(65+userAnsIdx)}. ${q.choices[userAnsIdx]}`;
-      const correctText = `${String.fromCharCode(65+correctIdx)}. ${q.choices[correctIdx]}`;
       row.innerHTML = `
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div style="font-weight:700">Q${i+1}. ${q.question}</div>
-          <div style="font-weight:700;color:${isCorrect ? '#065f46' : '#7f1d1d'}">${isCorrect ? 'Correct' : 'Wrong'}</div>
-        </div>
-        <div style="margin-top:8px">
-          <div class="small">Your answer: ${userAnsText}</div>
-          <div class="small" style="margin-top:4px">Correct answer: <strong>${correctText}</strong></div>
-          ${q.explanation ? `<div style="margin-top:8px" class="small"><em>Explanation:</em> ${q.explanation}</div>` : ''}
-        </div>
+        <p><strong>Q${i+1}: ${q.question}</strong></p>
+        <p class="small">Your answer: <span style="color:${isCorrect?'green':'red'}">${answers[i] !== null ? q.choices[answers[i]] : 'No Answer'}</span></p>
+        <p class="small">Correct: <strong>${q.choices[q.answerIndex]}</strong></p>
+        ${q.explanation ? `<p class="small"><em>Note: ${q.explanation}</em></p>` : ''}
+        <hr>
       `;
       answerKey.appendChild(row);
     });
-
-    // scroll to top
-    window.scrollTo({top:0, behavior:'smooth'});
+    
+    document.getElementById('finalScore').innerText = `${correct} / ${questions.length}`;
+    document.getElementById('scorePercent').innerText = `${Math.round((correct/questions.length)*100)}%`;
   }
 
-  function endExam(auto=false){
-    // lock interactions
-    started = false;
-    clearInterval(timer);
-    // We will present final score page and answer key.
-    showResults(auto);
-  }
-
-  // Event listeners
-  startBtn.addEventListener('click', ()=>{
-    if(started) return;
-    // set time
-    const m = parseInt(minsInput.value) || 0;
-    const s = parseInt(secsInput.value) || 0;
-    const total = m*60 + s;
-    if(total <= 0){
-      alert('Please set a time greater than 0 seconds.');
-      return;
-    }
+  startBtn.onclick = () => {
     started = true;
+    document.getElementById('setupControls').classList.add('hidden');
     examArea.classList.remove('hidden');
-    resultArea.classList.add('hidden');
-    // enable navigation etc
     renderQuestion(0);
-    updatePaginationStyles();
-    startTimer(total);
-    // disable time inputs once started
-    minsInput.disabled = true; secsInput.disabled = true;
-  });
+    startTimer(parseInt(minsInput.value) * 60);
+  };
 
-  resetBtn.addEventListener('click', ()=>{
-    clearInterval(timer);
-    started = false;
-    answers = Array(questions.length).fill(null);
-    currentIndex = 0;
-    minsInput.disabled = false; secsInput.disabled = false;
-    const m = parseInt(minsInput.value) || 0;
-    const s = parseInt(secsInput.value) || 0;
-    totalSeconds = m*60 + s;
-    remainingSeconds = totalSeconds;
-    updateTimerDisplay(remainingSeconds);
-    buildPagination();
-    renderQuestion(0);
-    examArea.classList.remove('hidden');
-    resultArea.classList.add('hidden');
-  });
+  document.getElementById('prevBtn').onclick = () => { if(currentIndex > 0) renderQuestion(currentIndex-1); };
+  document.getElementById('nextBtn').onclick = () => { if(currentIndex < questions.length-1) renderQuestion(currentIndex+1); };
+  document.getElementById('submitBtn').onclick = () => { if(confirm("Submit exam?")) endExam(); };
 
-  prevBtn.addEventListener('click', ()=>{
-    if(currentIndex > 0) renderQuestion(currentIndex-1);
-  });
-  nextBtn.addEventListener('click', ()=>{
-    if(currentIndex < questions.length-1) renderQuestion(currentIndex+1);
-  });
-
-  submitBtn.addEventListener('click', ()=>{
-    if(!started){
-      // still allow manual submission before starting?
-      if(confirm('Exam has not started — do you still want to submit current answers?')){
-        endExam(false);
-      }
-      return;
-    }
-    if(!confirm('Submit exam now? You will not be able to change answers.')) return;
-    endExam(false);
-  });
-
-  reviewBtn.addEventListener('click', ()=>{
-    // show review in place of results: present answers page already shown. We'll scroll.
-    window.scrollTo({top:0, behavior:'smooth'});
-  });
-
-  restartBtn.addEventListener('click', ()=>{
-    // reset everything to initial
-    clearInterval(timer);
-    started = false;
-    answers = Array(questions.length).fill(null);
-    currentIndex = 0;
-    minsInput.disabled = false; secsInput.disabled = false;
-    buildPagination();
+  init();
+})();
+gination();
     renderQuestion(0);
     examArea.classList.remove('hidden');
     resultArea.classList.add('hidden');
